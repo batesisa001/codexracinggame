@@ -1,0 +1,26 @@
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; overflow: hidden; font-family: Arial, sans-serif; background: #000; }
+#game-canvas { position: fixed; inset: 0; width: 100vw; height: 100vh; display: block; }
+.overlay {
+  position: fixed; inset: 0; display: none; align-items: center; justify-content: center;
+  flex-direction: column; background: rgba(6, 10, 20, 0.82); z-index: 20; text-align: center;
+}
+.overlay.visible { display: flex; }
+.panel { background: rgba(17, 27, 44, 0.9); border: 1px solid #476a96; border-radius: 10px; padding: 1rem 1.25rem; min-width: 280px; }
+.panel.row { display: flex; gap: .75rem; }
+label { display: flex; justify-content: space-between; align-items: center; margin: .6rem 0; gap: .7rem; }
+button, select { padding: .5rem .75rem; border-radius: 6px; border: 1px solid #6e93c5; background: #193357; color: #dcecff; }
+button:hover { background: #255089; cursor: pointer; }
+.hint { margin-top: 1rem; font-size: 0.9rem; opacity: 0.85; }
+.hud { position: fixed; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; padding: 10px; z-index: 10; pointer-events: none; }
+.hud.hidden { display: none; }
+.hud-left, .hud-right { background: rgba(8, 14, 24, 0.65); padding: .5rem .7rem; border-radius: 10px; border: 1px solid #365b81; }
+#speed { font-size: 1.5rem; font-weight: bold; }
+#timer { font-size: 1.3rem; margin-bottom: .3rem; }
+#minimap { margin-top: .5rem; background: rgba(0,0,0,.35); border: 1px solid #3a5a7f; border-radius: 8px; }
+.countdown {
+  position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  font-size: clamp(3rem, 9vw, 7rem); font-weight: 900; color: #fff; text-shadow: 0 0 18px #86c3ff;
+  z-index: 15; pointer-events: none;
+}
